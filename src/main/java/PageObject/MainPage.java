@@ -1,3 +1,5 @@
+package PageObject;
+
 import org.openqa.selenium.*;
 
 public class MainPage {

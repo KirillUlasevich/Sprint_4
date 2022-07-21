@@ -1,3 +1,6 @@
+package PageObject;
+
+import model.OrderData;
 import org.openqa.selenium.*;
 
 public class OrderPage {
@@ -19,7 +22,7 @@ public class OrderPage {
     private final String xpathSamokatColorBox = "//input[@class = 'Checkbox_Input__14A2w' and @id = '%s']"; // цвет самоката
     private final By finalOrderButton = By.xpath(".//button[@class ='Button_Button__ra12g Button_Middle__1CSJM' and text() = 'Заказать']"); // кнопка "Заказать", завершающая заказ
     private final By yesOrderButton = By.xpath(".//button[@class ='Button_Button__ra12g Button_Middle__1CSJM' and text() = 'Да']"); // кнопка "Да", подтверждающая создание заказа
-    private final By orderNotCreated = By.className("Order_ModalHeader__3FDaJ"); // поле подтверждения создания заказа
+    private final By orderNotCreated = By.xpath(".//div[@class='Order_ModalHeader__3FDaJ'][text()='Заказ оформлен']"); // поле подтверждения создания заказа
 
     public OrderPage(WebDriver driver) {
         this.driver = driver;
